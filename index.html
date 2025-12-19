@@ -7,34 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #d4af37; --bg: #000; --text: #fff; }
-        body { background: var(--bg); color: var(--text); font-family: 'Times New Roman', serif; margin: 0; line-height: 1.6; }
         
-        /* Navigation */
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_5958~2.JPG'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: var(--text); 
+            font-family: 'Times New Roman', serif; 
+            margin: 0; 
+            line-height: 1.6; 
+        }
+        
         nav { background: rgba(0,0,0,0.9); padding: 20px; text-align: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; }
         nav a:hover { color: var(--gold); }
 
         header { padding: 100px 20px; text-align: center; }
         h1 { font-size: 3.5em; letter-spacing: 10px; color: var(--gold); margin: 0; }
-        .tagline { font-size: 1.1em; letter-spacing: 3px; color: #888; margin-top: 10px; }
+        .tagline { font-size: 1.1em; letter-spacing: 3px; color: #eee; margin-top: 10px; }
 
-        /* Стиль иконок соцсетей */
         .social-icons { margin-top: 25px; }
         .social-icons a { color: var(--text); font-size: 1.8em; margin: 0 15px; text-decoration: none; transition: 0.3s; }
         .social-icons a:hover { color: var(--gold); }
 
-        .section { max-width: 900px; margin: 100px auto; padding: 0 20px; text-align: center; }
+        .section { max-width: 900px; margin: 100px auto; padding: 40px 20px; text-align: center; background: rgba(0,0,0,0.6); border-radius: 10px; }
         h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
         p { font-size: 1.1em; color: #ccc; }
 
-        /* Контент разделов */
-        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; }
-        .bio-text { font-style: italic; border-left: 2px solid var(--gold); padding-left: 20px; }
+        .bio-text { font-style: italic; border-left: 2px solid var(--gold); padding-left: 20px; text-align: left; }
         
-        .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; }
+        .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; background: rgba(0,0,0,0.8); }
         .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
 
-        footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; }
+        footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.9); }
     </style>
 </head>
 <body>
@@ -62,14 +68,14 @@
 <section class="section" id="bio">
     <h2>Biographie</h2>
     <div class="bio-text">
-        <p>Ilfat Sadykov est un musicien professionnel diplômé, possédant une vaste expérience de la scène internationale. Spécialiste du saxophone, de la clarриnette et de la flûte, il a parcouru de nombreux pays pour partager sa passion de la musique.</p>
+        <p>Ilfat Sadykov est un musicien professionnel diplômé, possédant une vaste expérience de la scène internationale. Spécialiste du saxophone, de la clarinette et de la flûte, il a parcouru de nombreux pays pour partager sa passion de la musique.</p>
         <p>Son répertoire s'étend du jazz classique à la musique contemporaine, offrant une ambiance élégante et sophistiquée pour tout type d'événement.</p>
     </div>
 </section>
 
 <section class="section" id="school">
     <h2>School / École</h2>
-    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'imпровизация.</p>
+    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
     <p>Les cours sont disponibles pour : <strong>Saxophone, Clarinette et Flûte traversière.</strong></p>
 </section>
 
