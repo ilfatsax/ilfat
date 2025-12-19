@@ -3,88 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ILFAT SADYKOV | Saxophoniste & Professeur</title>
+    <title>ILFAT SADYKOV | Musician</title>
     <style>
-        :root { --gold: #d4af37; --dark: #0a0a0a; }
-        body { background-color: var(--dark); color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; line-height: 1.6; }
+        :root { --gold: #d4af37; --bg: #000; --text: #fff; }
+        body { background: var(--bg); color: var(--text); font-family: 'Times New Roman', serif; margin: 0; line-height: 1.6; }
         
-        header { padding: 60px 20px; text-align: center; border-bottom: 1px solid var(--gold); }
-        h1 { color: var(--gold); font-size: 3em; margin: 0; letter-spacing: 5px; text-transform: uppercase; }
-        .subtitle { font-size: 1.2em; font-weight: 300; letter-spacing: 2px; margin-top: 10px; color: #aaa; }
-
-        nav { background: rgba(0,0,0,0.9); padding: 15px; position: sticky; top: 0; text-align: center; z-index: 1000; border-bottom: 1px solid #222; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.8em; letter-spacing: 1px; transition: 0.3s; }
+        /* Navigation */
+        nav { background: rgba(0,0,0,0.9); padding: 20px; text-align: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; }
         nav a:hover { color: var(--gold); }
 
-        .section { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        h2 { border-left: 3px solid var(--gold); padding-left: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        header { padding: 100px 20px; text-align: center; }
+        h1 { font-size: 3.5em; letter-spacing: 10px; color: var(--gold); margin: 0; }
+        .tagline { font-size: 1.1em; letter-spacing: 3px; color: #888; margin-top: 10px; }
 
-        .bio-text { text-align: justify; color: #ccc; }
-        
-        .contact-box { background: #111; padding: 40px; border: 1px solid var(--gold); text-align: center; margin-top: 40px; }
-        .contact-box a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
+        .section { max-width: 900px; margin: 100px auto; padding: 0 20px; text-align: center; }
+        h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
+        p { font-size: 1.1em; color: #ccc; }
 
-        .video-placeholder { background: #222; padding: 50px; text-align: center; border: 1px dashed #444; margin: 20px 0; }
+        /* Контент разделов */
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; }
+        .bio-text { font-style: italic; border-left: 2px solid var(--gold); padding-left: 20px; }
         
-        footer { text-align: center; padding: 40px; font-size: 0.8em; color: #666; border-top: 1px solid #222; }
+        .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; }
+        .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
+
+        footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ILFAT SADYKOV</h1>
-    <div class="subtitle">Saxophoniste • Flûtiste • Clarinettiste • Professeur</div>
-</header>
-
 <nav>
-    <a href="#home">ACCUEIL</a>
-    <a href="#bio">BIO</a>
-    <a href="#school">ÉCOLE</a>
-    <a href="#video">VIDEO</a>
-    <a href="#concerts">CONCERTS</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#bio">Bio</a>
+    <a href="#school">School</a>
+    <a href="#video">Video</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section class="section" id="home">
-    <h2>Bienvenue</h2>
-    <p>Musicien professionnel avec une vaste expérience internationale, Ilfat Sadykov propose des prestations musicales raffinées pour vos événements privés, soirées de gala, mariages et concerts en France et à l'étranger.</p>
-</section>
+<header id="accueil">
+    <h1>ILFAT SADYKOV</h1>
+    <div class="tagline">SAXOPHONISTE | FLÛTISTE | CLARINETTISTE</div>
+</header>
 
 <section class="section" id="bio">
     <h2>Biographie</h2>
     <div class="bio-text">
-        <p>Ilfat Sadykov est un musicien polyvalent dont le talent s'étend du saxophone à la flûte et à la clarinette. Diplômé des conservatoires prestigieux, il a développé un style unique mêlant la rigueur classique à la liberté du jazz et de la musique moderne.</p>
-        <p>Basé en France, il collabore avec de nombreux artistes et formations musicales, apportant une touche élégante et une énergie exceptionnelle à chaque performance.</p>
+        <p>Ilfat Sadykov est un musicien professionnel diplômé, possédant une vaste expérience de la scène internationale. Spécialiste du saxophone, de la clarinette et de la flûte, il a parcouru de nombreux pays pour partager sa passion de la musique.</p>
+        <p>Son répertoire s'étend du jazz classique à la musique contemporaine, offrant une ambiance élégante et sophistiquée pour tout type d'événement.</p>
     </div>
 </section>
 
 <section class="section" id="school">
-    <h2>École de Musique / School</h2>
-    <p>Ilfat Sadykov propose des cours de saxophone, clarinette et flûte pour tous les niveaux. Que vous soyez débutant ou musicien confirmé, les cours sont adaptés à vos objectifs personnels (technique, improvisation, solfège).</p>
+    <h2>School / École</h2>
+    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
+    <p>Les cours sont disponibles pour : <strong>Saxophone, Clarinette et Flûte traversière.</strong></p>
 </section>
 
 <section class="section" id="video">
-    <h2>Vidéos</h2>
-    <div class="video-placeholder">
-        <p>Для вставки видео с YouTube, скопируйте код "Embed" и вставьте его сюда.</p>
-    </div>
+    <h2>Videos</h2>
+    <p>Retrouvez mes dernières performances en direct sur ma chaîne YouTube officielle.</p>
+    <a href="https://www.youtube.com/@ilfatsax" target="_blank" style="color: var(--gold); text-decoration: none;">Voir toutes les vidéos →</a>
 </section>
 
 <section class="section" id="contact">
     <h2>Contact</h2>
-    <div class="contact-box">
-        <p>Pour toute demande de prestation ou de cours :</p>
+    <div class="contact-info">
+        <p>Pour des réservations de concerts, mariages, événements privés ou cours de musique :</p>
         <a href="tel:+33632006011">+33 6 32 00 60 11</a>
         <a href="mailto:ilfatsax@gmail.com">ilfatsax@gmail.com</a>
-        <p>Suivez-moi sur : <br>
-            <a href="https://instagram.com/ilfatsax" style="display:inline; font-size: 1em;">Instagram</a> | 
-            <a href="https://youtube.com/@ilfatsax" style="display:inline; font-size: 1em;">YouTube</a>
+        <p style="margin-top: 20px;">
+            <a href="https://www.instagram.com/ilfatsax" target="_blank" style="font-size: 1em; display: inline;">Instagram</a> | 
+            <a href="https://soundcloud.com/ilfatsax" target="_blank" style="font-size: 1em; display: inline;">SoundCloud</a>
         </p>
     </div>
 </section>
 
 <footer>
-    &copy; 2025 ILFAT SADYKOV. Tous droits réservés.
+    © 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS
 </footer>
 
 </body>
