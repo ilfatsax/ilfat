@@ -31,6 +31,27 @@
         .social-icons a { color: var(--text); font-size: 1.8em; margin: 0 15px; text-decoration: none; transition: 0.3s; }
         .social-icons a:hover { color: var(--gold); }
 
+        /* Style pour la vidéo en haut */
+        .header-video {
+            max-width: 560px;
+            margin: 40px auto 0 auto;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         .section { max-width: 900px; margin: 100px auto; padding: 40px 20px; text-align: center; background: rgba(0,0,0,0.6); border-radius: 10px; }
         h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
         p { font-size: 1.1em; color: #ccc; }
@@ -62,6 +83,17 @@
         <a href="https://www.facebook.com/ilfat" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://www.youtube.com/user/ilfattenor/" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://soundcloud.com/ilfat-sadykov/demo-is-ilfat-sadykov-saxophone-paris" target="_blank"><i class="fab fa-soundcloud"></i></a>
+    </div>
+
+    <div class="header-video">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/jKVcLlUMB8Q?autoplay=1&mute=1&loop=1&playlist=jKVcLlUMB8Q" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </header>
 
