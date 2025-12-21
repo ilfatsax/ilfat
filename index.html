@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #d4af37; --bg: #000; --text: #fff; }
-        
         body { 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('IMG_5958~2.JPG'); 
             background-attachment: fixed;
@@ -18,88 +17,51 @@
             margin: 0; 
             line-height: 1.6; 
         }
-        
         nav { background: rgba(0,0,0,0.9); padding: 20px; text-align: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; }
         nav a:hover { color: var(--gold); }
-
         header { padding: 100px 20px; text-align: center; }
         h1 { font-size: 3.5em; letter-spacing: 10px; color: var(--gold); margin: 0; }
         .tagline { font-size: 1.1em; letter-spacing: 3px; color: #eee; margin-top: 10px; }
-
         .social-icons { margin-top: 25px; }
         .social-icons a { color: var(--text); font-size: 1.8em; margin: 0 15px; text-decoration: none; transition: 0.3s; }
         .social-icons a:hover { color: var(--gold); }
-
-        /* Style pour la vidéo organique */
-        .header-video {
-            max-width: 700px;
-            margin: 50px auto 0 auto;
-            border: 1px solid rgba(212, 175, 55, 0.5);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2);
-            background: #000;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
+        .header-video { max-width: 700px; margin: 50px auto 0 auto; border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2); background: #000; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .section { max-width: 900px; margin: 100px auto; padding: 40px 20px; text-align: center; background: rgba(0,0,0,0.6); border-radius: 10px; }
         h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
         p { font-size: 1.1em; color: #ccc; }
-
         .bio-text { font-style: italic; border-left: 2px solid var(--gold); padding-left: 20px; text-align: left; }
-        
         .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; background: rgba(0,0,0,0.8); }
         .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
-
         footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.9); }
     </style>
 </head>
 <body>
-
 <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#bio">Bio</a>
-    <a href="#school">School</a>
-    <a href="#video">Video</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#bio">Bio</a>
+    <a href="index.html#school">School</a>
+    <a href="index.html#video">Video</a>
+    <a href="collection.html">Collection</a>
+    <a href="index.html#contact">Contact</a>
 </nav>
-
 <header id="accueil">
     <h1>IS ILFAT SADYKOV</h1>
     <div class="tagline">SAXOPHONISTE | FLÛTISTE | CLARINETTISTE</div>
-    
     <div class="social-icons">
         <a href="https://www.instagram.com/is_sax/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/ilfat" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://www.youtube.com/user/ilfattenor/" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://soundcloud.com/ilfat-sadykov/demo-is-ilfat-sadykov-saxophone-paris" target="_blank"><i class="fab fa-soundcloud"></i></a>
     </div>
-
     <div class="header-video">
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/jKVcLlUMB8Q?autoplay=1&mute=1&loop=1&playlist=jKVcLlUMB8Q" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.youtube.com/embed/jKVcLlUMB8Q?autoplay=1&mute=1&loop=1&playlist=jKVcLlUMB8Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </header>
-
 <section class="section" id="bio">
     <h2>Biographie</h2>
     <div class="bio-text">
@@ -107,38 +69,12 @@
         <p>Son répertoire s'étend du jazz classique à la musique contemporaine, offrant une ambiance élégante et sophistiquée pour tout type d'événement.</p>
     </div>
 </section>
-
 <section class="section" id="school">
     <h2>School / École</h2>
-    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est мис sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
+    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
     <p>Les cours sont disponibles pour : <strong>Saxophone, Clarinette et Flûte traversière.</strong></p>
 </section>
-
 <section class="section" id="video">
     <h2>Videos</h2>
     <p>Retrouvez mes dernières performances en direct sur ma chaîne YouTube officielle.</p>
-    <a href="https://www.youtube.com/user/ilfattenor/" target="_blank" style="color: var(--gold); text-decoration: none;">Voir toutes les vidéos →</a>
-</section>
-
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-        <p>Pour des réservations de concerts, mariages, événements privés ou cours de musique :</p>
-        <a href="tel:+33632006011">+33 6 32 00 60 11</a>
-        <a href="mailto:ilfatsax@gmail.com">ilfatsax@gmail.com</a>
-        
-        <div class="social-icons" style="margin-top: 30px;">
-            <a href="https://www.instagram.com/is_sax/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/ilfat" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/user/ilfattenor/" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://soundcloud.com/ilfat-sadykov/demo-is-ilfat-sadykov-saxophone-paris" target="_blank"><i class="fab fa-soundcloud"></i></a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    © 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS
-</footer>
-
-</body>
-</html>
+    
