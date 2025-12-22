@@ -33,9 +33,32 @@
         h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
         p { font-size: 1.1em; color: #ccc; }
         .bio-text { font-style: italic; border-left: 2px solid var(--gold); padding-left: 20px; text-align: left; }
-        .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; background: rgba(0,0,0,0.8); }
+        
+        /* Стили секции контактов */
+        .contact-info { border: 1px solid var(--gold); padding: 40px; margin-top: 50px; background: rgba(0,0,0,0.8); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; gap: 30px; }
+        .contact-details { flex: 1; min-width: 280px; }
         .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
+        
+        /* Стили для QR-кода */
+        .qr-section { flex: 0 0 200px; text-align: center; }
+        .qr-card { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(5px); transition: 0.4s; }
+        .qr-card:hover { border-color: var(--gold); transform: scale(1.05); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        .qr-card img { width: 100%; border-radius: 8px; display: block; filter: brightness(1.1); }
+        .qr-label { color: var(--gold); font-size: 0.75em; margin-top: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: bold; }
+        
+        /* Анимация указателя */
+        .pointer-icon { font-size: 2em; color: var(--gold); margin-bottom: 10px; animation: point-down 1.5s infinite; }
+        @keyframes point-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
         footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.9); }
+
+        @media (max-width: 600px) {
+            .contact-info { flex-direction: column; }
+            h1 { font-size: 2.5em; }
+        }
     </style>
 </head>
 <body>
@@ -63,31 +86,46 @@
         </div>
     </div>
 </header>
+
 <section class="section" id="bio">
     <h2>Biographie</h2>
     <div class="bio-text">
-        <p>Ilfat Sadykov est un musicien профессиональный diplômé, possédant une vaste expérience de la scène internationale. Spécialiste du saxophone, de la clarinette et de la flûte, il a parcouru de nombreux pays pour partager sa passion de la musique.</p>
+        <p>Ilfat Sadykov est un musicien professionnel diplômé, possédant une vaste expérience de la scène internationale. Spécialiste du saxophone, de la clarinette et de la flûte, il a parcouru de nombreux pays pour partager sa passion de la musique.</p>
         <p>Son répertoire s'étend du jazz classique à la musique contemporaine, offrant une ambiance élégante et sophistiquée pour tout type d'événement.</p>
     </div>
 </section>
+
 <section class="section" id="school">
     <h2>School / École</h2>
-    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'imпровизация.</p>
+    <p>Ilfat propose des cours particuliers de musique pour tous les ages. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
     <p>Les cours sont disponibles pour : <strong>Saxophone, Clarinette et Flûte traversière.</strong></p>
 </section>
+
 <section class="section" id="video">
     <h2>Videos</h2>
     <p>Retrouvez mes dernières performances en direct sur ma chaîne YouTube officielle.</p>
     <a href="https://www.youtube.com/user/ilfattenor/" target="_blank" style="color: var(--gold); text-decoration: none;">Voir toutes les vidéos →</a>
 </section>
+
 <section class="section" id="contact">
     <h2>Contact</h2>
     <div class="contact-info">
-        <p>Pour des réservations de concerts, mariages, événements privés ou cours de musique :</p>
-        <a href="tel:+33632006011">+33 6 32 00 60 11</a>
-        <a href="mailto:ilfatsax@gmail.com">ilfatsax@gmail.com</a>
+        <div class="contact-details">
+            <p>Pour des réservations de concerts, mariages, événements privés или cours de musique :</p>
+            <a href="tel:+33632006011">+33 6 32 00 60 11</a>
+            <a href="mailto:ilfatsax@gmail.com">ilfatsax@gmail.com</a>
+        </div>
+        
+        <div class="qr-section">
+            <div class="pointer-icon"><i class="fas fa-hand-point-down"></i></div>
+            <div class="qr-card">
+                <img src="QR-contact.jpg" alt="Scan to save contact">
+                <div class="qr-label">Scan me to get my contact</div>
+            </div>
+        </div>
     </div>
 </section>
+
 <footer>© 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS</footer>
 </body>
 </html>
