@@ -9,7 +9,7 @@
         :root { --gold: #d4af37; --bg: #000; --text: #fff; }
         
         body { 
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('IMG_5958~2.JPG'); 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG_5958~2.JPG'); 
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -23,43 +23,56 @@
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
 
-        .container { max-width: 1200px; margin: 80px auto; padding: 0 25px; text-align: center; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 25px; text-align: center; }
         h1 { font-size: 3.5em; color: var(--gold); text-transform: uppercase; letter-spacing: 10px; margin-bottom: 10px; font-weight: 300; }
-        .subtitle { color: #aaa; margin-bottom: 70px; font-size: 1.1em; letter-spacing: 3px; font-style: italic; }
+        .subtitle { color: #ccc; margin-bottom: 50px; font-size: 1.1em; letter-spacing: 3px; font-style: italic; }
 
         .friends-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-            gap: 30px; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
         }
 
         .friend-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            aspect-ratio: 16 / 9; /* Более современная форма вместо квадрата */
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 20px 30px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2em; /* Увеличенный шрифт */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 4px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 25px;
-            text-decoration: none;
-            color: #ddd;
-            font-size: 1em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.5s ease;
-            backdrop-filter: blur(5px);
-            border-radius: 2px;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        /* Добавляем золотую иконку перед текстом */
+        .friend-card::before {
+            content: "\f105"; /* Иконка стрелочки */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--gold);
+            margin-right: 15px;
+            transition: 0.3s;
         }
 
         .friend-card:hover {
             border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.08);
-            color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateX(10px); /* Плавный сдвиг вправо вместо прыжка вверх */
+            box-shadow: -5px 0 15px rgba(212, 175, 55, 0.3);
         }
 
-        footer { padding: 60px; font-size: 0.8em; color: #555; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.95); margin-top: 100px; letter-spacing: 1px; }
+        .friend-card:hover::before {
+            margin-right: 25px;
+        }
+
+        footer { padding: 60px; font-size: 0.8em; color: #555; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.95); margin-top: 100px; }
     </style>
 </head>
 <body>
@@ -79,9 +92,9 @@
     <div class="subtitle">Collaborations Artistiques et Institutionnelles</div>
     
     <div class="friends-grid">
-        <a href="#" class="friend-card">Ecole D'Art Musical<br>Suzuki Virtuosi</a>
-        <a href="#" class="friend-card">Conservatoire<br>Serge Rachmaninoff</a>
-        <a href="#" class="friend-card">Conservatoire du 11e<br>Charles Munch</a>
+        <a href="#" class="friend-card">Ecole D'Art Musical - Suzuki Virtuosi</a>
+        <a href="#" class="friend-card">Conservatoire Serge Rachmaninoff</a>
+        <a href="#" class="friend-card">Conservatoire du 11e Charles Munch</a>
         <a href="#" class="friend-card">Soundslike</a>
         <a href="#" class="friend-card">Florent Souchet</a>
         <a href="#" class="friend-card">Istvan Dorosz</a>
