@@ -29,17 +29,17 @@
 
         .friends-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 20px; 
         }
 
         .friend-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 20px 30px;
+            padding: 22px 30px;
             text-decoration: none;
             color: #fff;
-            font-size: 1.2em; /* Увеличенный шрифт */
+            font-size: 1.25em;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: all 0.4s ease;
@@ -51,9 +51,8 @@
             text-align: left;
         }
 
-        /* Добавляем золотую иконку перед текстом */
         .friend-card::before {
-            content: "\f105"; /* Иконка стрелочки */
+            content: "\f105";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             color: var(--gold);
@@ -64,12 +63,9 @@
         .friend-card:hover {
             border-color: var(--gold);
             background: rgba(212, 175, 55, 0.15);
-            transform: translateX(10px); /* Плавный сдвиг вправо вместо прыжка вверх */
+            transform: translateX(10px);
             box-shadow: -5px 0 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .friend-card:hover::before {
-            margin-right: 25px;
+            color: var(--gold);
         }
 
         footer { padding: 60px; font-size: 0.8em; color: #555; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.95); margin-top: 100px; }
@@ -92,27 +88,27 @@
     <div class="subtitle">Collaborations Artistiques et Institutionnelles</div>
     
     <div class="friends-grid">
-        <a href="#" class="friend-card">Ecole D'Art Musical - Suzuki Virtuosi</a>
-        <a href="#" class="friend-card">Conservatoire Serge Rachmaninoff</a>
-        <a href="#" class="friend-card">Conservatoire du 11e Charles Munch</a>
-        <a href="#" class="friend-card">Soundslike</a>
-        <a href="#" class="friend-card">Florent Souchet</a>
-        <a href="#" class="friend-card">Istvan Dorosz</a>
-        <a href="#" class="friend-card">Syncopa Uno</a>
-        <a href="#" class="friend-card">Atelier W</a>
-        <a href="#" class="friend-card">Le Gray</a>
-        <a href="#" class="friend-card">Martin Joey Dine</a>
-        <a href="#" class="friend-card">Les Musiciens D'Oz</a>
-        <a href="#" class="friend-card">Whisper Note</a>
-        <a href="#" class="friend-card">L'Épicerie du Jazz</a>
-        <a href="#" class="friend-card">Orchestre Smart Music</a>
-        <a href="#" class="friend-card">IMEP Paris College of Music</a>
-        <a href="#" class="friend-card">Brooklyn Music School</a>
-        <a href="#" class="friend-card">Gel Production</a>
-        <a href="#" class="friend-card">Julien Simoni</a>
-        <a href="#" class="friend-card">JV Art</a>
-        <a href="#" class="friend-card">Up Events</a>
-        <a href="#" class="friend-card">DJ Sabir Rekson</a>
+        <a href="https://ecoledartmusical.fr/" target="_blank" class="friend-card">Ecole D'Art Musical - Suzuki Virtuosi</a>
+        <a href="https://conservatoire-sr.com/" target="_blank" class="friend-card">Conservatoire Serge Rachmaninoff</a>
+        <a href="https://conservatoires.paris.fr/conservatoires/munch" target="_blank" class="friend-card">Conservatoire du 11e Charles Munch</a>
+        <a href="https://www.soundslike.fr/" target="_blank" class="friend-card">Soundslike</a>
+        <a href="https://florentsouchet.com/" target="_blank" class="friend-card">Florent Souchet</a>
+        <a href="https://www.bassistvan.com/" target="_blank" class="friend-card">Istvan Dorosz</a>
+        <a href="https://www.syncopa-uno.com/" target="_blank" class="friend-card">Syncopa Uno</a>
+        <a href="https://www.atelierwparis.com/" target="_blank" class="friend-card">Atelier W</a>
+        <a href="https://legray.fr/" target="_blank" class="friend-card">Le Gray</a>
+        <a href="http://www.martinjoeydine.tv/" target="_blank" class="friend-card">Martin Joey Dine</a>
+        <a href="http://lesmusiciensdoz.com/" target="_blank" class="friend-card">Les Musiciens D'Oz</a>
+        <a href="https://whispernotejazz.com/" target="_blank" class="friend-card">Whisper Note</a>
+        <a href="https://epiceriedujazz.com/" target="_blank" class="friend-card">L'Épicerie du Jazz</a>
+        <a href="https://smart-music.fr/" target="_blank" class="friend-card">Orchestre Smart Music</a>
+        <a href="https://imep.pro/" target="_blank" class="friend-card">IMEP Paris College of Music</a>
+        <a href="https://brooklynmusicschool.org/" target="_blank" class="friend-card">Brooklyn Music School</a>
+        <a href="https://www.gelproduction.com/" target="_blank" class="friend-card">Gel Production</a>
+        <a href="https://juliensimoni.com/" target="_blank" class="friend-card">Julien Simoni</a>
+        <a href="https://www.jvart.fr/" target="_blank" class="friend-card">JV Art</a>
+        <a href="https://www.upeventsmusic.com/" target="_blank" class="friend-card">Up Events</a>
+        <a href="https://rekson-event.com/" target="_blank" class="friend-card">DJ Sabir Rekson</a>
     </div>
 </div>
 
