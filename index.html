@@ -39,7 +39,7 @@
         .contact-info a { color: var(--gold); text-decoration: none; font-size: 1.5em; display: block; margin: 10px 0; }
         
         .qr-section { flex: 0 0 200px; text-align: center; }
-        .qr-card { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(5px); transition: 0.4s; }
+        .qr-card { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(5px); transition: 0.4s; cursor: pointer; text-decoration: none; display: block; }
         .qr-card:hover { border-color: var(--gold); transform: scale(1.05); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
         .qr-card img { width: 100%; border-radius: 8px; display: block; }
         .qr-label { color: var(--gold); font-size: 0.75em; margin-top: 10px; letter-spacing: 1px; text-transform: uppercase; font-weight: bold; }
@@ -115,10 +115,10 @@
         
         <div class="qr-section">
             <div class="pointer-icon"><i class="fas fa-hand-point-down"></i></div>
-            <div class="qr-card">
-                <img src="QR-contact.jpg" alt="Scan to save contact">
-                <div class="qr-label">Scan me to get my contact</div>
-            </div>
+            <a href="contact.vcf" download class="qr-card">
+                <img src="QR-contact.jpg" alt="Scan or Click to save contact">
+                <div class="qr-label">Click or Scan to save contact</div>
+            </a>
         </div>
     </div>
 </section>
