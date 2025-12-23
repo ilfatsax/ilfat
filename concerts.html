@@ -22,24 +22,8 @@
         nav a:hover { color: var(--gold); }
         
         .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-        h1 { text-align: center; font-size: 3em; color: var(--gold); letter-spacing: 8px; text-transform: uppercase; margin-bottom: 30px; }
+        h1 { text-align: center; font-size: 3em; color: var(--gold); letter-spacing: 8px; text-transform: uppercase; margin-bottom: 50px; }
         
-        /* Стили для Instagram блока на странице концертов */
-        .news-section-concerts { 
-            max-width: 450px; 
-            margin: 0 auto 50px auto; 
-            text-align: center;
-            opacity: 0.9;
-        }
-        .news-section-concerts h2 { 
-            font-size: 1.2em; 
-            color: var(--gold); 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            margin-bottom: 15px;
-        }
-        .instagram-container { display: flex; justify-content: center; }
-
         .concert-item { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 8px; border-left: 3px solid var(--gold); margin-bottom: 20px; transition: 0.3s; }
         .concert-item:hover { background: rgba(212, 175, 55, 0.05); transform: translateX(5px); }
         
@@ -73,14 +57,6 @@
 <div class="container">
     <h1>Concerts</h1>
 
-    <div class="news-section-concerts" id="news">
-        <h2>Dernières Nouvelles</h2>
-        <div class="instagram-container">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSfxcXzDMmz/" data-instgrm-version="14" style=" background: transparent; border:0; border-radius:3px; box-shadow:none; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
-            </blockquote>
-        </div>
-    </div>
-
     <div class="concert-item">
         <span class="date">02.07.2022</span>
         <div class="details"><span class="project-name">MARTIN JOEY DINE Quartet</span> | Rencontres Musicales de Chaon</div>
@@ -92,17 +68,16 @@
         <div class="details"><span class="project-name">Sycopa Uno</span> | Le Baiser Salé</div>
         <span class="location">Paris, France</span>
     </div>
+    
     <div class="concert-item">
         <span class="date">07.05.2022</span>
         <div class="details"><span class="project-name">Trio d'Ilfat Sadykov</span> | Salle Des Fêtes</div>
         <span class="location">Bannegon, France</span>
     </div>
-
+    
     </div>
 
 <footer>© 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS</footer>
-
-<script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 </html>
