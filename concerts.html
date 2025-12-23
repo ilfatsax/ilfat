@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concerts | IS ILFAT SADYKOV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --gold: #d4af37; --bg: #000; --text: #fff; }
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('IMG_5958~2.JPG'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: var(--text); 
+            font-family: 'Times New Roman', serif; 
+            margin: 0; 
+            line-height: 1.6; 
+        }
+        nav { background: rgba(0,0,0,0.95); padding: 20px; text-align: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; }
+        nav a:hover { color: var(--gold); }
+        
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h1 { text-align: center; font-size: 3em; color: var(--gold); letter-spacing: 8px; text-transform: uppercase; margin-bottom: 50px; }
+        
+        .concert-item { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 8px; border-left: 3px solid var(--gold); margin-bottom: 20px; transition: 0.3s; }
+        .concert-item:hover { background: rgba(212, 175, 55, 0.05); transform: translateX(5px); }
+        
+        .date { color: var(--gold); font-size: 1.4em; font-weight: bold; display: block; margin-bottom: 5px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); width: fit-content; padding-bottom: 2px; }
+        .details { font-size: 1.1em; color: #eee; }
+        .location { color: #aaa; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block; }
+        .project-name { font-weight: bold; color: #fff; }
+
+        footer { padding: 50px; font-size: 0.8em; color: #444; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.9); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .date { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#bio">Bio</a>
+    <a href="index.html#school">School</a>
+    <a href="index.html#video">Video</a>
+    <a href="concerts.html">Concerts</a>
+    <a href="collection.html">Collection</a>
+    <a href="friends.html">Friends</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Concerts</h1>
+
+    <div class="concert-item">
+        <span class="date">02.07.2022</span>
+        <div class="details"><span class="project-name">MARTIN JOEY DINE Quartet</span> | Rencontres Musicales de Chaon</div>
+        <span class="location">Chaon, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">24.06.2022</span>
+        <div class="details"><span class="project-name">Sycopa Uno</span> | Le Baiser Salé</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">07.05.2022</span>
+        <div class="details"><span class="project-name">Trio d'Ilfat Sadykov</span> | Salle Des Fêtes</div>
+        <span class="location">Bannegon, France</span>
+    </div>
+
+    <div class="concert-item">
+        <span class="date">19.11.2017</span>
+        <div class="details"><span class="project-name">BIG BAND de PERSAN</span> | Jazz Au Fil De L'Oise</div>
+        <span class="location">Persan, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">11.06.2017</span>
+        <div class="details"><span class="project-name">Tribute to Stevie Wonder</span> | Le Zorba</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">31.05.2017</span>
+        <div class="details"><span class="project-name">Talkin' About John</span> | Le Marcounet</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">12.05.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Les Disquaires</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">21.04.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Les Disquaires</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">31.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Les Disquaires</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">25.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Escale’N Jazz</div>
+        <span class="location">La Ville-du-Bois, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">22.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Inferno</div>
+        <span class="location">Morzine, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">21.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Cottage</div>
+        <span class="location">Morzine, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">20.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Rock The Pistes Off</div>
+        <span class="location">Morzine, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">18.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Jazzy’s Bar</div>
+        <span class="location">Megève, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">17.03.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Jazzy’s Bar</div>
+        <span class="location">Megève, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">25.02.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Les Disquaires</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">10.02.2017</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Dame Rose</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">28.01.2017</span>
+        <div class="details"><span class="project-name">Big-Band CRC Persan</span> | MJC Persan, Salle Marcel Cahin</div>
+        <span class="location">Persan, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">27.01.2017</span>
+        <div class="details"><span class="project-name">Big-Band CRC Persan</span> | MJC Persan, Salle Marcel Cahin</div>
+        <span class="location">Persan, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">21.01.2017</span>
+        <div class="details"><span class="project-name">Duo Alexandra Tenisheva, Ilfat Sadykov</span> | Casino de Cavalaire</div>
+        <span class="location">Cavalaire-Sur-Mer, France</span>
+    </div>
+
+    <div class="concert-item">
+        <span class="date">15.10.2016</span>
+        <div class="details"><span class="project-name">Big-Band CRC Persan</span> | MJC Persan, Salle Marcel Cahin</div>
+        <span class="location">Persan, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">30.09.2016</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Les Disquaires</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">25.09.2016</span>
+        <div class="details"><span class="project-name">Guillaume Rat</span> | Eglise Saint François de Salles - Adamville</div>
+        <span class="location">Saint-Maur-des-Fossés, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">26.07.2016</span>
+        <div class="details"><span class="project-name">Ailing Elly Pei Quintet</span> | Festival FAMM</div>
+        <span class="location">Albières, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">09.07.2016</span>
+        <div class="details"><span class="project-name">Ailing Elly Pei Quintet</span> | CIM</div>
+        <span class="location">Narbonne, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">02.07.2016</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Festival “Beat And Beer”</div>
+        <span class="location">Malakoff, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">25.06.2016</span>
+        <div class="details"><span class="project-name">Guillaume Rat</span> | Eglise Saint François de Salles - Adamville</div>
+        <span class="location">Saint-Maur-des-Fossés, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">21.06.2016</span>
+        <div class="details"><span class="project-name">Fête de la musique</span> | Café “Le Marceau”</div>
+        <span class="location">Paris, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">17.06.2016</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | Festival “Le Grand Unisson”</div>
+        <span class="location">Saint-Jean-de-la-Ruelle, France</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">04.06.2016</span>
+        <div class="details"><span class="project-name">IS Trio</span> | Volgafest</div>
+        <span class="location">Samara, Russia</span>
+    </div>
+    <div class="concert-item">
+        <span class="date">31.05.2016</span>
+        <div class="details"><span class="project-name">Achille’s Family</span> | FGO-Barbara</div>
+        <span class="location">Paris, France</span>
+    </div>
+
+</div>
+
+<footer>© 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS</footer>
+
+</body>
+</html>
 
