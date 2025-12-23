@@ -20,15 +20,23 @@
         nav { background: rgba(0,0,0,0.9); padding: 20px; text-align: center; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; }
         nav a:hover { color: var(--gold); }
+        
         header { padding: 100px 20px; text-align: center; }
         h1 { font-size: 3.5em; letter-spacing: 10px; color: var(--gold); margin: 0; }
         .tagline { font-size: 1.1em; letter-spacing: 3px; color: #eee; margin-top: 10px; }
+        
         .social-icons { margin-top: 25px; }
         .social-icons a { color: var(--text); font-size: 1.8em; margin: 0 15px; text-decoration: none; transition: 0.3s; }
         .social-icons a:hover { color: var(--gold); }
+        
         .header-video { max-width: 700px; margin: 50px auto 0 auto; border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.2); background: #000; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Section News / Instagram */
+        .news-section { max-width: 900px; margin: 50px auto; padding: 40px 20px; text-align: center; background: rgba(0,0,0,0.8); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 10px; }
+        .instagram-container { display: flex; justify-content: center; margin-top: 20px; }
+
         .section { max-width: 900px; margin: 100px auto; padding: 40px 20px; text-align: center; background: rgba(0,0,0,0.6); border-radius: 10px; }
         h2 { font-size: 2em; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
         p { font-size: 1.1em; color: #ccc; }
@@ -59,8 +67,10 @@
     </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#news">Actualités</a>
     <a href="index.html#bio">Bio</a>
     <a href="index.html#school">School</a>
     <a href="index.html#video">Video</a>
@@ -69,6 +79,7 @@
     <a href="friends.html">Friends</a>
     <a href="index.html#contact">Contact</a>
 </nav>
+
 <header id="accueil">
     <h1>IS ILFAT SADYKOV</h1>
     <div class="tagline">SAXOPHONISTE | FLÛTISTE | CLARINETTISTE</div>
@@ -85,6 +96,15 @@
     </div>
 </header>
 
+<section class="news-section" id="news">
+    <h2>Dernières Nouvelles</h2>
+    <p>Suivez mon actualité sur Instagram</p>
+    <div class="instagram-container">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DSfxcXzDMmz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            </blockquote>
+        </div>
+</section>
+
 <section class="section" id="bio">
     <h2>Biographie</h2>
     <div class="bio-text">
@@ -95,7 +115,7 @@
 
 <section class="section" id="school">
     <h2>School / École</h2>
-    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est мис sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
+    <p>Ilfat propose des cours particuliers de musique pour tous les âges. L'accent est mis sur la maîtrise technique de l'instrument, le développement de l'oreille musicale et l'improvisation.</p>
     <p>Les cours sont disponibles pour : <strong>Saxophone, Clarinette et Flûte traversière.</strong></p>
 </section>
 
@@ -125,5 +145,8 @@
 </section>
 
 <footer>© 2025 ILFAT SADYKOV - TOUS DROITS RÉSERVÉS</footer>
+
+<script async src="//www.instagram.com/embed.js"></script>
+
 </body>
 </html>
