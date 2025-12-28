@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | ILFAT SADYKOV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --gold: #d4af37; --bg: #000; --text: #fff; }
+        
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('IMG_5958~2.JPG'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: var(--text); 
+            font-family: 'Times New Roman', serif; 
+            margin: 0; 
+            line-height: 1.6; 
+        }
+        
+        nav { background: rgba(0,0,0,0.95); padding: 20px; text-align: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
 
+        .container { max-width: 1400px; margin: 60px auto; padding: 0 25px; text-align: center; }
+        h1 { font-size: 3.5em; color: var(--gold); text-transform: uppercase; letter-spacing: 10px; margin-bottom: 10px; font-weight: 300; }
+        .subtitle { color: #ccc; margin-bottom: 50px; font-size: 1.1em; letter-spacing: 3px; font-style: italic; }
+
+        .photo-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 20px; 
+            margin-top: 40px;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .photo-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: var(--gold);
+            font-size: 3em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: #fff;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            font-size: 3em;
+            cursor: pointer;
+            transition: 0.3s;
+            padding: 20px;
+        }
+
+        .lightbox-nav:hover {
+            color: #fff;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        footer { padding: 60px; font-size: 0.8em; color: #555; border-top: 1px solid #111; text-align: center; background: rgba(0,0,0,0.95); margin-top: 100px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#news">Actualités</a>
+    <a href="index.html#bio">Bio</a>
+    <a href="index.html#school">School</a>
+    <a href="index.html#video">Video</a>
+    <a href="concerts.html">Concerts</a>
+    <a href="collection.html">Collection</a>
+    <a href="photos.html" style="color: var(--gold);">Photos</a>
+    <a href="friends.html">Friends</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Photos</h1>
+    <div class="subtitle">Galerie de concerts et événements</div>
+    
+    <div class="photo-grid" id="photoGrid"></div>
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span class="lightbox-nav lightbox-prev" onclick="changePhoto(-1)">&#10094;</span>
+    <img id="lightboxImg" src="" alt="Photo">
+    <span class="lightbox-nav lightbox-next" onclick="changePhoto(1)">&#10095;</span>
+</div>
+
+<footer>
+    © 2025 ILFAT SADYKOV — TOUS DROITS RÉSERVÉS
+</footer>
+
+<script>
+    const totalPhotos = 76;
+    const baseUrl = 'https://raw.githubusercontent.com/ilfatsax/media/main/';
+    let currentPhotoIndex = 0;
+    const photoUrls = [];
+
+    // Генерируем галерею
+    const photoGrid = document.getElementById('photoGrid');
+    for (let i = 1; i <= totalPhotos; i++) {
+        const photoNumber = String(i).padStart(4, '0');
+        const photoUrl = `${baseUrl}${photoNumber}.jpg`;
+        photoUrls.push(photoUrl);
+        
+        const photoItem = document.createElement('div');
+        photoItem.className = 'photo-item';
+        photoItem.onclick = () => openLightbox(i - 1);
+        
+        const img = document.createElement('img');
+        img.src = photoUrl;
+        img.alt = `Photo ${i}`;
+        img.loading = 'lazy';
+        
+        photoItem.appendChild(img);
+        photoGrid.appendChild(photoItem);
+    }
+
+    function openLightbox(index) {
+        currentPhotoIndex = index;
+        document.getElementById('lightboxImg').src = photoUrls[index];
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    function changePhoto(direction) {
+        currentPhotoIndex += direction;
+        if (currentPhotoIndex < 0) currentPhotoIndex = totalPhotos - 1;
+        if (currentPhotoIndex >= totalPhotos) currentPhotoIndex = 0;
+        document.getElementById('lightboxImg').src = photoUrls[currentPhotoIndex];
+    }
+
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') changePhoto(-1);
+        if (e.key === 'ArrowRight') changePhoto(1);
+    });
+
+    // Закрытие по клику на фон
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') closeLightbox();
+    });
+</script>
+
+</body>
+</html>
